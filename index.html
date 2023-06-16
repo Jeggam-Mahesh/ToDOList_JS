@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>  
+    <span >Tasks List</span>
+    <button onclick="showpopup()" id="add">+ </button><b>  Add item</b>
+    <h2 id="empty">No items in todo list</h2>
+    <div class="popbox " id="popbox">
+        <h2>Add new task</h2>
+        <p><input type="text" name="addtask" id="tripname"></p>
+        <button id="addcard" onclick="newcard()">Add</button>
+        <button id="close" onclick="hide()">close</button>
+    </div>
+    <div class="taskpopup" id="rpopup">
+        <h2>Add new item</h2>
+        <p><input type="text" name="additem" id="itemname"></p>
+        <button id="additems" >Add</button>
+        <!-- onclick="newtask_item()" -->
+        <button id="closetask" onclick="hiden()">close</button>
+     
+    </div>
+   <div id="specialcard">
+     <button onclick="spcl_card_close()" id="back"><</button><b>Back</b>
+     <h2 id='special'></h2>
+    <button onclick="showpopup()" id="add">+ </button>
+   </div>
+<div id="maincontainer">
+        
+</div>
+
+</body>
+<script src="./script.js"></script>
+</html>
