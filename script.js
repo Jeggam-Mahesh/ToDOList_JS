@@ -1,4 +1,4 @@
-var temp=document.getElementById('popbox')
+var temp=document.getElementById('popbox')  
 let emptyvar=document.getElementById('empty')
 let removetaskpopup=document.getElementById('rpopup')
 let tasklist=document.getElementById('head')
@@ -7,10 +7,12 @@ let firstchild=document.getElementById('firstchild');
 let inlinediv=document.getElementById('inlinediv');
 function showpopup(){
  temp.classList.add('showpop')
+ container.style.display='none';
 }
 
 function hide(){ 
  temp.classList.remove ('showpop')
+ container.style.display="flex";
 }
 
 //*******************Adding new caard  ***************
