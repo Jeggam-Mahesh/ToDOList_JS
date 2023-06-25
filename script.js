@@ -6,11 +6,10 @@ let specialcard=document.getElementById('specialcard');
 let firstchild=document.getElementById('firstchild');
 let inlinediv=document.getElementById('inlinediv');
 function showpopup(){
- 
  temp.classList.add('showpop')
 }
 
-function hide(){
+function hide(){ 
  temp.classList.remove ('showpop')
 }
 
@@ -28,7 +27,13 @@ let map=new Map();
 function newcard(){
   cnt++; 
   cnt2++;
-   container.style.display='flex';
+  if(flag){
+    container.style.display='none';
+    }
+    else{
+      container.style.display='flex';
+    }
+  //  container.style.display='flex';
   temp.classList.remove ('showpop')
 let card=document.createElement('div');
 card.setAttribute('id',`card${cnt}`)
@@ -97,19 +102,16 @@ ad_btn.addEventListener('click',()=>{
 // if(cnt>0){
 
    cardd = document.getElementById('card1');
-  console.log(cardd)
-   
-   console.log(specialcard)
     let tempp=document.getElementById('trip1');
-    console.log(tempp)
+
+
     tempp.addEventListener('click',()=>{
-     flag=false;
      tasklist.style.display='none';
       container.style.display="none";
     specialcard.style.display='block'
       inlinediv.appendChild(cardd);
+      flag=true;
     })
-// }
 if(cnt2>0){
   emptyvar.style.display='none';
   }
@@ -126,6 +128,7 @@ function spcl_card_close(){
  inlinediv.removeChild(cardd);
  firstchild.appendChild(cardd);
  firstchild.style.display='block'
+ flag=false;
 }
 
 //function showtask popup and hidden
@@ -145,14 +148,12 @@ function hiden(){
 //FUNCTION ADD SUBTASKS
 function addtodo(){
   removetaskpopup.style.display="none";
-  // if(flag){
-  //   container.style.display='flex';
-  // }
-  // else{
-  // container.style.display='none';
-  
-  // }
+if(flag){
+container.style.display='none';
+}
+else{
   container.style.display='flex';
+}
   let append_to_div=document.getElementById(`${ceeeer}`);
   let inputitem=document.getElementById('itemname');
   let tasktodo=document.createElement('h4');
@@ -179,10 +180,9 @@ let toggle=true;
  
 //  console.log(cardd);
 //  
-function back(){
-  specialcard.style.display='none';
-  container.style.display='flex';
-    flag=true;
-}
+// function back(){
+//   specialcard.style.display='none';
+//   container.style.display='flex';
+// }
 
  
